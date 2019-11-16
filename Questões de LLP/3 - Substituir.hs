@@ -12,5 +12,5 @@ substituir :: Int -> Int -> [Int] -> [Int]
 -}
 substituir a b [] = [] -- Se a lista estiver vazia retorne vazio
 substituir a b (x:xs) -- Cabeça 'x' e corpo 'xs'
-	| (x == a) = substituir a b xs++[b] --Caso a cabeça seja igual ao elemento que se quer substituir, então retorne a substituição do corpo concatenado com b
-	| otherwise = substituir a b xs++[x] --Senão retorne a concatenação de xs com a prórpia cabeça
+	| (x == a) = (b: substituir a b xs) --Caso a cabeça seja igual ao elemento que se quer substituir, então retorne a substituição de b concatenando com o corpo
+	| otherwise = (x: substituir a b xs) --Senão retorne a concatenação da cabeça com o corpo
