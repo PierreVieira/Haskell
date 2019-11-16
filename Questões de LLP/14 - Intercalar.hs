@@ -3,6 +3,7 @@
 	Data: 15/11/2019
 	Github: https://github.com/PierreVieira
 -}
+
 intercalar :: [t] -> [t] -> [t]
 {-
 	Entradas: 2 listas
