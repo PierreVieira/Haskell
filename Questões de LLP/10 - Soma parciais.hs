@@ -3,6 +3,7 @@
 	Data: 15/11/2019
 	Github: https://github.com/PierreVieira
 -}
+
 progressaoAritmetica :: Int -> Int
 {-
 	Entrada: número inteiro
