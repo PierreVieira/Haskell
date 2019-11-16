@@ -14,9 +14,9 @@ invLista :: [Int] -> [Int]
 invLista [] = []
 invLista (x:xs) = invLista xs ++ [x]
 
-retornaListaSemCabeca :: [Int] -> [Int]
-retornaListaSemCabeca [] = []
-retornaListaSemCabeca (x:xs) = xs
+semCabeca :: [Int] -> [Int]
+semCabeca [] = []
+semCabeca (x:xs) = xs
 
 removerFim :: Int -> [Int] -> [Int]
 {-
@@ -27,4 +27,4 @@ removerFim :: Int -> [Int] -> [Int]
 removerFim n l
 	|n >= sizeList l = [] -- Se o número solicitado for maior ou igual ao tamanho da lista, então retorne a lista vazia
 	|(n == 0) = l -- Se o número soliciatado for 0, então retorne a lista original
-	|otherwise = removerFim (n-1) (invLista(retornaListaSemCabeca (invLista l))) -- Inverte a lista, remove a cabeça e inverte novamente
+	|otherwise = removerFim (n-1) (invLista(semCabeca (invLista l))) -- Inverte a lista, remove a cabeça e inverte novamente
