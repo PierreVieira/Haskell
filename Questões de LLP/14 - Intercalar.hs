@@ -9,4 +9,4 @@ intercalar :: [t] -> [t] -> [t]
 	Entradas: 2 listas
 	Saída: Listas intercaladas	
 -}
-intercalar lista1 lista2 = lista1++lista2
+intercalar lista1 lista2 = lista1++lista2 --Junta a lista 1 com a lista 2
