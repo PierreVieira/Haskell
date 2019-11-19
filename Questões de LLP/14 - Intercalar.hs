@@ -1,12 +1,19 @@
+menor :: Int -> Int -> Int
 {-
-	Autor: Pierre Vieira
-	Data: 15/11/2019
-	Github: https://github.com/PierreVieira
+	Entradas: 2 números
+	Saída: Número menor
 -}
+menor x y = if(x<y) then x else y -- Se x é menor que y, então retorne x, senão retorne y
 
-intercalar :: [t] -> [t] -> [t]
+maior :: Int -> Int -> Int
 {-
-	Entradas: 2 listas
-	Saída: Listas intercaladas	
+	Entradas: 2 números
+	Saída: Número amaior
 -}
-intercalar lista1 lista2 = lista1++lista2 --Junta a lista 1 com a lista 2
+maior x y = if(x>y) then x else y -- Se x é maior que y, então retorne x, senão retorne y
+
+intercalar :: [Int] -> [Int] -> [Int]
+intercalar [] [] = [] -- A intercalação de duas listas vazias resulta em uma lista vazia
+intercalar l [] = l -- A intercalação de uma lista com uma lista vazia é a própria lista
+intercalar [] l = l -- A intercalação de uma lista vazia com uma lista é a própria lista
+intercalar (a:b) (c:d) = []++[menor a c]++[maior a c]++intercalar b d --Junta uma lista vazia com o menor termo da cabeça da lista com o maior termo da cabeça da lista com a intercalação de cada um dos corpos
